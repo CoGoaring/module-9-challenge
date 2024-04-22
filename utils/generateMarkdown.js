@@ -27,8 +27,8 @@ function renderLicenseSection(license) {
   let badge = ``;
   let link = ``;
   if (license != `None`) {
-    const badge = renderLicenseBadge(license);
-    const link = `More information can be found about the license here: ${renderLicenseLink(license)}`;
+    badge = renderLicenseBadge(license);
+    link = `More information can be found about the license here: ${renderLicenseLink(license)}`;
   }
 
   return `
@@ -39,41 +39,41 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  // const renderLicense = renderLicenseSection(data.license)
   return `
-      # ${data.title}
-
-      ${renderLicenseSection(data.license)}
-
-      ### Description
+  # ${data.title}
+    ${renderLicenseSection(data.license)}
+  ### Description
 
       ${data.description}
 
-      ### Table of Contents
-      * Installation
-      * Usage
-      * Contribution
-      * Test
-      * Questions
+  ### Table of Contents
+      * [Installation](installation)
+      * [Usage](usage)
+      * [Contribution](contribution)
+      * [Test](test)
+      * [Questions](questions)
 
-      ## Installation
+  ## Installation
 
       Make sure you follow these commands to install this project
       ${data.installation}
 
-      ## Usage
+  ## Usage
 
-      You should use this project as a guideline to help create README's
+      These are the usage cases for my project
       ${data.usage}
 
-      ## Contribution
+  ## Contribution
 
       ${data.contribution}
+      You can also contact me with my information down below: [Questions](questions)
 
-      ## Test
+  ## Test
 
       ${data.test}
 
-      ## Questions
+  ## Questions
 
       You can contact me at: ${data.email}
       My Github is: ${data.github}

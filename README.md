@@ -1,41 +1,40 @@
 
-      # hello
-
-      
-      
-      
+  # module 9 
+    
+      ![License Badge](https://shields.io/badge/license-MIT-green)
+      More information can be found about the license here: https://mit-license.org/
   
+  ### Description
 
-      ### Description
+      README generator
 
-      hello
+  ### Table of Contents
+      * [Installation](installation)
+      * [Usage](usage)
+      * [Contribution](contribution)
+      * [Test](test)
+      * [Questions](questions)
 
-      ### Table of Contents
-      * Installation
-      * Usage
-      * Contribution
-      * Test
-      * Questions
-
-      ## Installation
+  ## Installation
 
       Make sure you follow these commands to install this project
-      hello
+      run npm install before usage
 
-      ## Usage
+  ## Usage
 
-      You should use this project as a guideline to help create README's
-      hello
+      These are the usage cases for my project
+      open the integrated terminal and run node index.js
 
-      ## Contribution
+  ## Contribution
 
-      hello
+      you can contribute anything you find using my information
+      You can also contact me with my information down below: [Questions](questions)
 
-      ## Test
+  ## Test
 
-      hi
+      install npm, run the project, follow all questions asked
 
-      ## Questions
+  ## Questions
 
-      You can contact me at: hello
-      My Github is: connor
+      You can contact me at: connorgoaring@gmail.com
+      My Github is: CoGoaring
