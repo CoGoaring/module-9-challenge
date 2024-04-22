@@ -38,7 +38,7 @@ const questions = [
     },
     {
         type: `list`,
-        name: `contribution`,
+        name: `license`,
         message: `Choose a license:`,
         choices: [`MIT`, `APACHE`, `GPL`, `None`]
     },
