@@ -2,7 +2,7 @@
 const fs = require(`fs`);
 const path = require(`path`);
 const inquirer = require(`inquirer`);
-const generateMarkdown = require(`generateMarkdown`);
+const generateMarkdown = require(`./utils/generateMarkdown`);
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -19,7 +19,7 @@ const questions = [
     {
         type: `input`,
         name: `installation`,
-        message: `Give a installation instructions for your project:`
+        message: `Give installation instructions for your project:`
     },
     {
         type: `input`,
@@ -40,7 +40,7 @@ const questions = [
         type: `list`,
         name: `contribution`,
         message: `Choose a license:`,
-        choices: []
+        choices: [`MIT`, `APACHE`, `GPL`, `None`]
     },
     {
         type: `input`,
@@ -57,10 +57,17 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((inquirerData) => {
+        console.log(`Creating README`);
+        writeToFile("README.md", generateMarkdown({...inquirerData}))
+    })
+}
 
 // Function call to initialize app
 init();
